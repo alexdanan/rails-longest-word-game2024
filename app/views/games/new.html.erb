@@ -1,0 +1,14 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+<p>Here are the letters:</p>
+  <ul>
+    <% @letters.each do |letter| %>
+      <li><%= letter %></li>
+    <% end %>
+  </ul>
+
+<form action="/score" method="post" data-turbo="false">
+  <input type="hidden" name="authenticity_token" value="<%=   form_authenticity_token   %>">
+  <input type="text" name="word" placeholder="Your word here">
+  <input type="submit" value="Submit">
+</form>
